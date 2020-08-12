@@ -1,5 +1,4 @@
 .idea/
 .vscode/
-app/vendor/
 .env
 .DS_Store
