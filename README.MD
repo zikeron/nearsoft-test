@@ -21,14 +21,16 @@ First of all consider that you need to have Docker installed in your machine. Al
 ````
 127.0.0.1  nearsoft.tst
 ````
-Consider, you might need to make some request to fill the nginx access.log to get some data to generate the CSV.
-### Installing
+### Consider
+ You might need to make some request to fill the nginx access.log to get some data to generate the CSV.
+ 
+## Installing
 * Clone the repository
 ```
 git clone git@github.com:zikeron/nearsoft-test.git
 ```
 
-### Executing program
+## Executing program
 
 * Initialize the docker
 ````
@@ -49,10 +51,6 @@ cd /var/www/nearsoft
 ```
 php artisan logger-parser
 ```
-
-### Cosiderations
-
-* 
 
 ## Authors
 
