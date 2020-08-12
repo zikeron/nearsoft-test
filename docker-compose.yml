@@ -1,0 +1,25 @@
+version: "3.8"
+
+volumes:
+  static-logs:
+
+services:
+  php:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./app:/var/www/nearsoft
+      - ./logs:/var/www/nearsoft/logs
+
+  nginx:
+    image: nginx:latest
+    ports:
+    - "80:80"
+    volumes:
+    - ./site.conf:/etc/nginx/conf.d/site.conf
+    - ./app/:/var/www/nearsoft
+    - ./php.ini:/usr/local/etc/php/conf.d/php.ini
+    - ./logs:/var/log/nginx/:rw
+    links:
+      - php
