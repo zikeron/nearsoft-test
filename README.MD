@@ -47,6 +47,11 @@ docker exec -it «name_container» bash
 cd /var/www/nearsoft
 ````
 
+* Installing dependencies
+````
+composer install --ignore-platfor-reqs
+````
+
 * Run the following path
 ```
 php artisan logger-parser
