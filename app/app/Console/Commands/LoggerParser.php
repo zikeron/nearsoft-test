@@ -111,7 +111,7 @@ class LoggerParser extends Command
 
     protected function getIpInfo(string $host) :array
     {
-        $geoPluginURL = self::BASE_GEO_URL . "201.152.14.166";
+        $geoPluginURL = self::BASE_GEO_URL . $host;
         $addrDetailsArr = unserialize(file_get_contents($geoPluginURL));
         return [
             $addrDetailsArr['geoplugin_city'] ?? "N/A",

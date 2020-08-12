@@ -22,7 +22,8 @@ First of all consider that you need to have Docker installed in your machine. Al
 127.0.0.1  nearsoft.tst
 ````
 ### Consider
- You might need to make some request to fill the nginx access.log to get some data to generate the CSV.
+ * You might need to make some request to fill the nginx access.log to get some data to generate the CSV.
+ * You can find the results in app/storage/csv/«Ymd_His».csv
  
 ## Installing
 * Clone the repository
